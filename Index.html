@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Presentación Vue en Html y Css</title>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #42b883;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #35415c;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+main {
+    width: 90%;
+    max-width: 800px;
+    margin: 25px auto;
+    padding: 20px;
+    background-color: white;
+}
+
+section {
+    display: none;
+}
+
+section:target {
+    display: block;
+}
+
+#inicio {
+    display: block;
+}
+
+body:has(section:target) #inicio:not(:target) {
+    display: none;
+}
+
+h2 {
+    color: #35415c;
+    text-align: center;
+}
+
+h3 {
+    color: #42b883;
+}
+
+img {
+    display: block;
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+}
+
+footer {
+    background-color: #35415c;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Presentación Vue en Html y Css</h1>
+    <p>Francesco Brunetto</p>
+</header>
+
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#framework">Framework</a>
+    <a href="#vue">¿Qué es Vue?</a>
+    <a href="#aplicacion">Crear una aplicación</a>
+    <a href="#componentes">Componentes</a>
+</nav>
+
+<main>
+
+<section id="inicio">
+    <h2>Introducción</h2>
+
+    <img src="app.png" alt="">
+
+    <p>
+        En esta página vamos a conocer qué es un framework,
+        para qué sirve Vue.js, cómo crear una aplicación local
+        y qué son los componentes
+    </p>
+
+    <img src="cover.png" alt="">
+</section>
+
+<section id="framework">
+    <h2>¿Qué significa Framework?</h2>
+
+    <p>
+        Un framework es una estructura que ofrece herramientas
+        para desarrollar programas y páginas web de una forma
+        más organizada, sin tener que empezar todo desde cero.
+    </p>
+
+    <p>
+        Cada framework tiene sus propias herramientas y sirve
+        para facilitar diferentes tareas de programación
+    </p>
+</section>
+
+<section id="vue">
+    <h2>¿Qué es Vue.js?</h2>
+
+    <img src="logo.jpg" alt="">
+
+    <p>
+        Vue.js es un framework de JavaScript que se utiliza
+        para crear interfaces de usuario y páginas web interactivas.
+    </p>
+
+    <p>
+        Permite trabajar con HTML, CSS y JavaScript, actualizar
+        los datos de una página y organizar el código de forma
+        más sencilla.
+    </p>
+
+    <h3>Características</h3>
+
+    <ul>
+        <li>Es flexible y fácil de integrar.</li>
+        <li>Permite crear componentes reutilizables.</li>
+        <li>Ayuda a desarrollar páginas interactivas.</li>
+    </ul>
+</section>
+
+<section id="aplicacion">
+    <h2>¿Cómo crear una aplicación local?</h2>
+
+    <img src="cover.png" alt="">
+
+    <p>
+        Para crear una aplicación en Vue necesitamos tener
+        instalado Node.js y utilizar una terminal
+    </p>
+
+    <p>
+        Primero ejecutamos el comando
+        npm create vue@latest para crear el proyecto
+    </p>
+
+    <p>
+        Después entramos en la carpeta del proyecto con
+        cd nombre-del-proyecto.
+    </p>
+
+    <p>
+        Luego ejecutamos npm install para instalar las
+        dependencias y npm run dev para iniciar la aplicación.
+    </p>
+
+    <p>
+        Finalmente, abrimos en el navegador la dirección local
+        que aparece en la terminal.
+    </p>
+</section>
+
+<section id="componentes">
+    <h2>¿Qué son los componentes?</h2>
+
+    <img src="vuevar.png" alt="">
+
+    <p>
+        Los componentes son partes de una página que se pueden
+        reutilizar, como un menú, un encabezado o una lista
+        de productos
+    </p>
+
+    <p>
+        En Vue permiten dividir una aplicación en partes más
+        pequeñas y mantener el código organizado
+    </p>
+
+    <h3>¿Cómo se usan?</h3>
+
+    <p>
+        Se crean generalmente en archivos con extensión .vue.
+        Después se pueden importar y utilizar dentro de otros
+        componentes para mostrar diferentes partes de la página.
+    </p>
+
+    <h3>Ventajas</h3>
+
+    <ul>
+        <li>Organizan el código.</li>
+        <li>Permiten reutilizar contenido.</li>
+        <li>Facilitan los cambios en la aplicación.</li>
+    </ul>
+
+    <img src="app.png" alt="">
+</section>
+
+</main>
+<footer>
+    Trabajo práctico de Vue.js - Francesco Brunetto
+</footer>
+
+</body>
+</html>
